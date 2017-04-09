@@ -16,5 +16,14 @@ namespace ElectroMagneticalAnalyse
         {
             InitializeComponent();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            int measuredFrequency = int.Parse(measuredFrequencyTextBox.Text);
+            double lenghtOfAntenna = double.Parse(lenghtOfAntennaTextBox.Text);
+            int maxDistance = int.Parse(maxDistanceTextBox.Text);
+
+            new ExecuteService().startToAnaliysys(measuredFrequency, lenghtOfAntenna, maxDistance);
+        }
     }
 }
